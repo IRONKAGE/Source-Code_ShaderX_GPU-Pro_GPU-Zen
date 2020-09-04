@@ -6,9 +6,9 @@ Source Code of Book: ShaderX, GPU Pro, GPU Zen - wrote Wolfgang Engel, collected
 
 ## **Books**
 
-[**GPU Zen2**](../Source-Code_ShaderX_GPU-Pro_GPU-Zen/GPU%20Zen2/README.md) — [***buy the book***](https://amzn.to/32SxQ0w), 304 pages, *April 21, 2019*, **ISBN-13:** 978-1797583143
+[**GPU Zen2**](GPU%20Zen2/README.md) — [***buy the book***](https://amzn.to/32SxQ0w), 304 pages, *April 21, 2019*, **ISBN-13:** 978-1797583143
 
-[**GPU Zen1**](../Source-Code_ShaderX_GPU-Pro_GPU-Zen/GPU%20Zen1/README.md) — [***buy the book***](https://amzn.to/3hSciHv), 360 pages, *May 15, 2017*, **ISBN-13:** 978-0998822891
+[**GPU Zen1**](GPU%20Zen1/README.md) — [***buy the book***](https://amzn.to/3hSciHv), 360 pages, *May 15, 2017*, **ISBN-13:** 978-0998822891
 
 [**GPU Pro7**] — [***buy the book***](https://amzn.to/32Zmo3f), 320 pages, *March 23, 2016*, **ISBN-13:** 978-1498742535
 
