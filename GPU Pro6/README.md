@@ -6,7 +6,20 @@
 
 [**Buy this book**](https://amzn.to/357zXQD)
 
+## **General System Requirements**
+
+---
+
+- OS Microsoft Windows 7.
+- Visual Studio C++ 2012 or higher.
+- The DirectX June 2010 SDK
+- 2GB RAM or more.
+- DirectX 9, DirectX 10 or DirectX 11 capable GPU or higher.
+- The latest GPU driver.
+
 ## **Short content of the book**
+
+---
 
 1. Geometry *(Wolfgang Engel)*
    1. Dynamic GPU Terrain by *(David Pangerl)*
