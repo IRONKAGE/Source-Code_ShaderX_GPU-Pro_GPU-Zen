@@ -6,7 +6,20 @@
 
 [**Buy this book**](https://amzn.to/32Zmo3f)
 
+## **General System Requirements**
+
+---
+
+- OS Microsoft Windows 10.
+- Visual Studio C++ 2012 or higher.
+- The DirectX June 2010 SDK
+- 2GB RAM or more.
+- DirectX 11 or DirectX 12 capable GPU or higher.
+- The latest GPU driver.
+
 ## **Short content of the book**
+
+---
 
 1. Geometry Manipulation *(Carsten Dachsbacher)*
    1. Hardware-Tessellated Deformable Snow in Rise of the Tomb Raider by *(Anton Kai Michels and Peter Sikachev)*
