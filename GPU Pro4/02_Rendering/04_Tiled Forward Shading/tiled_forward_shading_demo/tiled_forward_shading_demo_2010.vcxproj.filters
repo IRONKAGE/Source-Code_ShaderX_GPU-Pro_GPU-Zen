@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{05b01ef6-5780-4449-b7a4-b9904b6e73fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\CudaResource">
+      <UniqueIdentifier>{9933f0a7-b9b8-4e6a-8513-5b7fc9bf7e8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{b0566f15-514f-4cf8-af68-d7d1db550914}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\shadingModels">
+      <UniqueIdentifier>{58a23162-d096-4dac-9b42-d289231a69ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="linmath">
+      <UniqueIdentifier>{18b5d297-1cfd-40ba-b862-f906c358591d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="performance_monitor">
+      <UniqueIdentifier>{0168eeb3-7612-46f3-9a0d-470929aa33bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="performance_monitor\profiler">
+      <UniqueIdentifier>{47cb8714-290a-400b-b6fe-2c1c34220233}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="utils\Assert.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\CameraPoints.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\CheckGLError.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ComboShader.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\GLTimerQuery.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\HashFunction.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\PerformanceTimer.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\PlatformCompat.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Random.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\SimpleCamera.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\SimpleShader.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\CudaResource\CudaBuffer.cpp">
+      <Filter>utils\CudaResource</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\CudaResource\CudaResource.cpp">
+      <Filter>utils\CudaResource</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\CudaResource\CudaTexture.cpp">
+      <Filter>utils\CudaResource</Filter>
+    </ClCompile>
+    <ClCompile Include="linmath\Aabb.cpp">
+      <Filter>linmath</Filter>
+    </ClCompile>
+    <ClCompile Include="linmath\float2.cpp">
+      <Filter>linmath</Filter>
+    </ClCompile>
+    <ClCompile Include="linmath\float3.cpp">
+      <Filter>linmath</Filter>
+    </ClCompile>
+    <ClCompile Include="linmath\float3x3.cpp">
+      <Filter>linmath</Filter>
+    </ClCompile>
+    <ClCompile Include="linmath\float4.cpp">
+      <Filter>linmath</Filter>
+    </ClCompile>
+    <ClCompile Include="linmath\float4x4.cpp">
+      <Filter>linmath</Filter>
+    </ClCompile>
+    <ClCompile Include="linmath\int2.cpp">
+      <Filter>linmath</Filter>
+    </ClCompile>
+    <ClCompile Include="linmath\int3.cpp">
+      <Filter>linmath</Filter>
+    </ClCompile>
+    <ClCompile Include="linmath\int4.cpp">
+      <Filter>linmath</Filter>
+    </ClCompile>
+    <ClCompile Include="performance_monitor\PerfTreeBuilder.cpp">
+      <Filter>performance_monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="performance_monitor\PerfTreeNode.cpp">
+      <Filter>performance_monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="performance_monitor\profiler\Profiler.cpp">
+      <Filter>performance_monitor\profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="LightGrid.cpp" />
+    <ClCompile Include="OBJModel.cpp" />
+    <ClCompile Include="tiled_forward_shading_demo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils\Assert.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\BaseMath.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CameraPoints.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CheckGLError.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\ComboShader.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CudaBuffer.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CudaCheckError.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CudaHelpers.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CudaMath.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CudaSafeCall.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\GlBufferObject.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\GLTimerQuery.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\HashFunction.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\HashVector.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\IntTypes.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Math.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Path.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\PerformanceTimer.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\PlatformCompat.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Random.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Rendering.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\SimpleCamera.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\SimpleShader.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Win32ApiWrapper.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CudaResource\CudaBuffer.h">
+      <Filter>utils\CudaResource</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CudaResource\CudaResource.h">
+      <Filter>utils\CudaResource</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CudaResource\CudaTexture.h">
+      <Filter>utils\CudaResource</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\Aabb.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\Common.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\float2.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\float3.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\float3x3.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\float4.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\float4x4.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\int2.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\int3.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\int4.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\SmallVector2.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\SmallVector3.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="linmath\SmallVector4.h">
+      <Filter>linmath</Filter>
+    </ClInclude>
+    <ClInclude Include="performance_monitor\PerfTreeBuilder.h">
+      <Filter>performance_monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="performance_monitor\PerfTreeNode.h">
+      <Filter>performance_monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="performance_monitor\profiler\Profiler.h">
+      <Filter>performance_monitor\profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="performance_monitor\profiler\ProfilerConfig.h">
+      <Filter>performance_monitor\profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ClipRegion.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="CudaGlobals.h" />
+    <ClInclude Include="CudaRenderer.h" />
+    <ClInclude Include="DemoTypes.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="LightGrid.h" />
+    <ClInclude Include="OBJModel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Cudart_Build_Rule Include="utils\CudaHelpers.cu">
+      <Filter>utils</Filter>
+    </Cudart_Build_Rule>
+    <Cudart_Build_Rule Include="CudaRenderer.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\ColorSpaces.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\deferred_fragment.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\deferred_vertex.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\downsample_minmax_fragment.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\globals.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\LightAccel_Tiled.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Noise2D.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Noise3D.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\ObjModel.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\repackage_gbuffer_fragment.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\ShadingModel.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\simple_fragment.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\simple_vertex.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\srgb.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\tiled_deferred_fragment.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\tiled_deferred_vertex.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\tiled_forward_fragment.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\tiled_forward_vertex.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\shadingModels\ShadingModel_Carpaint.glsl">
+      <Filter>shaders\shadingModels</Filter>
+    </None>
+    <None Include="shaders\shadingModels\ShadingModel_Default.glsl">
+      <Filter>shaders\shadingModels</Filter>
+    </None>
+    <None Include="shaders\shadingModels\ShadingModel_RimLight.glsl">
+      <Filter>shaders\shadingModels</Filter>
+    </None>
+    <None Include="linmath\SmallVector2.inl">
+      <Filter>linmath</Filter>
+    </None>
+    <None Include="linmath\SmallVector3.inl">
+      <Filter>linmath</Filter>
+    </None>
+    <None Include="linmath\SmallVector4.inl">
+      <Filter>linmath</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
