@@ -6,9 +6,9 @@
 
 [**Buy this book**](https://amzn.to/32SxQ0w)
 
-## **General System Requirements**
-
 ---
+
+## **General System Requirements**
 
 - OS Microsoft Windows 10.
 - Visual Studio C++ 2017 or higher.
@@ -17,9 +17,9 @@
 - DirectX 12 and Vulkan capable GPU or higher.
 - The latest GPU driver.
 
-## **Short content of the book**
-
 ---
+
+## **Short content of the book**
 
 1. **Rendering** *(Patrick Cozzi)*
    1. Adaptive GPU Tessellation with Compute Shaders by *(Jad Khoury, Jonathan Dupuy, and Christophe Riccio)*
@@ -43,9 +43,9 @@
    1. Real-Time Ray-Traced One-Bounce Caustics by *(Holger Gruen)*
    2. Adaptive Anti-Aliasing using Conservative Rasterization and GPU Ray Tracing by *(Rahul Sathe, Holger Gruen, Adam Marrs, Josef Spjut, Morgan McGuire, Yury Uralsky)*
 
-## **Long content of the book**
-
 ---
+
+## **Long content of the book**
 
 Preface
 
