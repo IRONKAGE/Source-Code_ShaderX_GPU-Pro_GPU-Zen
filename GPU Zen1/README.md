@@ -6,9 +6,9 @@
 
 [**Buy this book**](https://amzn.to/3hSciHv)
 
-## **General System Requirements**
-
 ---
+
+## **General System Requirements**
 
 - OS Microsoft Windows 10.
 - Visual Studio C++ 2015 or higher.
@@ -17,9 +17,9 @@
 - DirectX 12 and Vulkan capable GPU or higher.
 - The latest GPU driver.
 
-## **Short content of the book**
-
 ---
+
+## **Short content of the book**
 
 1. **Geometry Manipulation** *(Christopher Oat)*
    1. Attributed Vertex Clouds by *(Willy Scheibel, Stefan Buschmann, Matthias Trapp, and Jürgen Döllner)*
