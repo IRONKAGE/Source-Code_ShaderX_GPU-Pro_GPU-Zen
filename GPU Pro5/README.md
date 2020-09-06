@@ -6,9 +6,9 @@
 
 [**Buy this book**](https://amzn.to/2Z5HtaX)
 
-## **General System Requirements**
-
 ---
+
+## **General System Requirements**
 
 - OS Microsoft Windows 7.
 - Visual Studio C++ 2012 or higher.
@@ -17,9 +17,9 @@
 - DirectX 9, DirectX 10 or DirectX 11 capable GPU or higher.
 - The latest GPU driver.
 
-## **Short content of the book**
-
 ---
+
+## **Short content of the book**
 
 1. **Rendering** *(Carsten Dachsbacher)*
    1. Per-pixel lists for Single Pass A-Buffer by *(Sylvain Lefebvre, Samuel Hornus and Anass Lasram)*
@@ -56,9 +56,9 @@
    4. Two-level Constraint Solver by *(Takahiro Harada)*
    5. Non-Separable 2D, 3D and 4D Filtering with Cuda by *(Anders Eklund and Paul Dufort)*
 
-## **Long content of the book**
-
 ---
+
+## **Long content of the book**
 
 Acknowledgments
 
