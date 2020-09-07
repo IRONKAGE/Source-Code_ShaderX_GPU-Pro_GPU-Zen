@@ -33,7 +33,7 @@
    1. Quad-tree Displacement Mapping with Height Blending by *(Michał Drobot)*
    2. NPR effects using the Geometry Shader by *(Pedro Hermosilla and Pere-Pau Vazquez)*
    3. Alpha Blending as a Post-Process by *(Benjamin Hathaway)*
-   4. Virtual Texture Mapping 101 by *(Matthaus G. Chajdas, Christian Eisenacher, Marc Stamminger, Sylvain Lefebvre)*
+   4. Virtual Texture Mapping 101 by *(Matthäus G. Chajdas, Christian Eisenacher, Marc Stamminger, Sylvain Lefebvre)*
    5. Volume Decals by *(Emil Persson)*
 4. **Global Illumination** *(Carsten Dachsbacher)*
    1. Fast, Stencil-Based Multiresolution Splatting for Indirect Illumination by *(Chris Wyman, Greg Nichols, and Jeremy Shopf)*
