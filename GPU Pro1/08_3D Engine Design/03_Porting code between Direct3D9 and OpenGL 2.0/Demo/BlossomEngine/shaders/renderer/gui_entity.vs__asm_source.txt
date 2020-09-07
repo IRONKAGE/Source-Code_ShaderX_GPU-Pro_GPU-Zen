@@ -1,0 +1,26 @@
+vs_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile vs_3_0 -entry main
+// source file: ./BlossomEngine/shaders/renderer/gui_entity.vs
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile vs_3_0
+//program main
+//var float2 input.position : $vin.POSITION0 : ATTR0 : 0 : 1
+//var float4 input.color : $vin.COLOR0 : ATTR1 : 0 : 1
+//var float2 input.texCoord0 : $vin.TEXCOORD0 : ATTR2 : 0 : 1
+//var float4 main.position : $vout.POSITION : ATTR0 : -1 : 1
+//var float4 main.color : $vout.COLOR0 : ATTR1 : -1 : 1
+//var float2 main.texCoord0 : $vout.TEXCOORD0 : ATTR2 : -1 : 1
+//const c[0] = 0 1
+dcl_position o0
+dcl_color0 o1
+dcl_texcoord0 o2
+def c0, 0.00000000, 1.00000000, 0, 0
+dcl_position0 v0
+dcl_color0 v1
+dcl_texcoord0 v2
+mov o1, v1
+mov o0.xy, v0
+mov o0.zw, c0.xyxy
+mov o2.xy, v2

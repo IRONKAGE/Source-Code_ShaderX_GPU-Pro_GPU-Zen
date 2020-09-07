@@ -1,0 +1,23 @@
+!!ARBfp1.0
+OPTION NV_fragment_program2;
+# cgc version 2.2.0006, build date Mar 31 2009
+# command line args: -q -profile fp40 -entry main
+# source file: data/shaders/screen_quad.ps
+#vendor NVIDIA Corporation
+#version 2.2.0.6
+#profile fp40
+#program main
+#semantic scene : TEXUNIT0
+#semantic texelHalfWidth
+#semantic texelHalfHeight
+#var float2 input.texCoord0 : $vin.TEXCOORD0 : TEX0 : 0 : 1
+#var sampler2D scene : TEXUNIT0 : texunit 0 : -1 : 1
+#var float texelHalfWidth :  :  : -1 : 0
+#var float texelHalfHeight :  :  : -1 : 0
+#var float4 main.color : $vout.COLOR : COL : -1 : 1
+TEMP RC;
+TEMP HC;
+OUTPUT oCol = result.color;
+TEX   oCol, fragment.texcoord[0], texture[0], 2D;
+END
+# 1 instructions, 0 R-regs, 0 H-regs

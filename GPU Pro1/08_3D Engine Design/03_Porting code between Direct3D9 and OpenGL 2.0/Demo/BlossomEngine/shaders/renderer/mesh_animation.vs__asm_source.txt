@@ -1,0 +1,101 @@
+vs_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile vs_3_0 -entry main
+// source file: ./BlossomEngine/shaders/renderer/mesh_animation.vs
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile vs_3_0
+//program main
+//semantic worldTransform
+//semantic worldTransformInversed
+//semantic animationMatrices
+//semantic viewProjTransform
+//var float4 input.position : $vin.POSITION0 : ATTR0 : 0 : 1
+//var float3 input.normal : $vin.NORMAL0 : ATTR1 : 0 : 1
+//var float3 input.tangent : $vin.TEXCOORD0 : ATTR2 : 0 : 1
+//var float3 input.bitangent : $vin.TEXCOORD1 : ATTR3 : 0 : 1
+//var float2 input.texCoord0 : $vin.TEXCOORD2 : ATTR4 : 0 : 1
+//var float input.nodeIndex : $vin.TEXCOORD3 : ATTR5 : 0 : 1
+//var float4x4 worldTransform :  : c[0], 4 : -1 : 1
+//var float4x4 worldTransformInversed :  : c[4], 4 : -1 : 1
+//var float4x4 animationMatrices[0] :  : c[8], 4 : -1 : 1
+//var float4x4 animationMatrices[1] :  : c[12], 4 : -1 : 1
+//var float4x4 animationMatrices[2] :  : c[16], 4 : -1 : 1
+//var float4x4 animationMatrices[3] :  : c[20], 4 : -1 : 1
+//var float4x4 animationMatrices[4] :  : c[24], 4 : -1 : 1
+//var float4x4 animationMatrices[5] :  : c[28], 4 : -1 : 1
+//var float4x4 animationMatrices[6] :  : c[32], 4 : -1 : 1
+//var float4x4 animationMatrices[7] :  : c[36], 4 : -1 : 1
+//var float4x4 animationMatrices[8] :  : c[40], 4 : -1 : 1
+//var float4x4 animationMatrices[9] :  : c[44], 4 : -1 : 1
+//var float4x4 animationMatrices[10] :  : c[48], 4 : -1 : 1
+//var float4x4 animationMatrices[11] :  : c[52], 4 : -1 : 1
+//var float4x4 animationMatrices[12] :  : c[56], 4 : -1 : 1
+//var float4x4 animationMatrices[13] :  : c[60], 4 : -1 : 1
+//var float4x4 animationMatrices[14] :  : c[64], 4 : -1 : 1
+//var float4x4 animationMatrices[15] :  : c[68], 4 : -1 : 1
+//var float4x4 animationMatrices[16] :  : c[72], 4 : -1 : 1
+//var float4x4 animationMatrices[17] :  : c[76], 4 : -1 : 1
+//var float4x4 animationMatrices[18] :  : c[80], 4 : -1 : 1
+//var float4x4 animationMatrices[19] :  : c[84], 4 : -1 : 1
+//var float4x4 viewProjTransform :  : c[88], 4 : -1 : 1
+//var float4 main.position : $vout.POSITION : ATTR0 : -1 : 1
+//var float3 main.normal : $vout.TEXCOORD0 : ATTR1 : -1 : 1
+//var float2 main.texCoord0 : $vout.TEXCOORD1 : ATTR2 : -1 : 1
+//var float3 main.lightDirection : $vout.TEXCOORD2 : ATTR3 : -1 : 1
+//const c[92] = 4 -0.57735026
+dcl_position o0
+dcl_texcoord0 o1
+dcl_texcoord1 o2
+dcl_texcoord2 o3
+def c92, 4.00000000, -0.57735026, 0, 0
+dcl_position0 v0
+dcl_normal0 v1
+dcl_texcoord0 v2
+dcl_texcoord1 v3
+dcl_texcoord2 v4
+dcl_texcoord3 v5
+frc r0.x, v5
+add r0.x, v5, -r0
+mul r0.x, r0, c92
+mova a0.x, r0
+mul r0, v0.y, c[a0.x + 9]
+mad r0, v0.x, c[a0.x + 8], r0
+mad r0, v0.z, c[a0.x + 10], r0
+mad r0, v0.w, c[a0.x + 11], r0
+mul r1, r0.y, c1
+mad r1, r0.x, c0, r1
+mad r1, r0.z, c2, r1
+mad r0, r0.w, c3, r1
+mul r1, r0.y, c89
+mad r1, r0.x, c88, r1
+mad r1, r0.z, c90, r1
+mad o0, r0.w, c91, r1
+mov r0.xyz, c4
+mul r1.xyz, c[a0.x + 9], v2.y
+mad r1.xyz, c[a0.x + 8], v2.x, r1
+mad r5.xyz, c[a0.x + 10], v2.z, r1
+add r0.xyz, c5, r0
+add r0.xyz, r0, c6
+mul r2.xyz, r0, c92.y
+mul r1.xyz, c[a0.x + 9], v1.y
+mul r3.xyz, c[a0.x + 9], v3.y
+mad r1.xyz, c[a0.x + 8], v1.x, r1
+mad r1.xyz, c[a0.x + 10], v1.z, r1
+mad r3.xyz, c[a0.x + 8], v3.x, r3
+mad r3.xyz, c[a0.x + 10], v3.z, r3
+mov r0.y, r3
+mov r3.y, r5.x
+mov r0.x, r5.y
+mov r0.z, r1.y
+mul r4.xyz, r1.y, r0
+mov r3.w, r1.x
+mul r0.xyz, r0, r2.y
+mad r0.xyz, r3.yxww, r2.x, r0
+mad r4.xyz, r1.x, r3.yxww, r4
+mov r3.y, r3.z
+mov r3.x, r5.z
+mov r3.z, r1
+mad o1.xyz, r1.z, r3, r4
+mad o3.xyz, r3, r2.z, r0
+mov o2.xy, v4

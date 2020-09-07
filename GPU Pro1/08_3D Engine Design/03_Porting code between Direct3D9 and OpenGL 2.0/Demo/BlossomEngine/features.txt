@@ -1,0 +1,10 @@
+$Id: features.txt 281 2009-09-11 01:56:17Z maxest $
+
+- quad-tree scene management
+- per-pixel lights (forward shading)
+- sunlight and spot light shadows (hardware shadow maps)
+- sky-box
+- full-scene bloom
+- water with reflection and refraction (based on scene projection, not stencil buffer)
+- simple GUI support
+- audio support for *.wav and *.ogg files

@@ -1,0 +1,15 @@
+ps_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile ps_3_0 -entry main
+// source file: data/shaders/mesh_shadowmap.ps
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile ps_3_0
+//program main
+//semantic diffuseMap : TEXUNIT0
+//var float2 input.texCoord0 : $vin.TEXCOORD0 :  : 0 : 0
+//var sampler2D diffuseMap : TEXUNIT0 : texunit 0 : -1 : 0
+//var float4 main.color : $vout.COLOR : COL : -1 : 1
+//const c[0] = 0
+def c0, 0.00000000, 0, 0, 0
+mov oC0, c0.x

@@ -1,0 +1,21 @@
+float ComputeScaleFactorSq (float2 uv, float2 size, float scale)
+{
+	float2 coord_pixels = uv * size;
+	
+	float2 x_deriv = ddx (coord_pixels);
+	float2 y_deriv = ddy (coord_pixels);
+		
+	return max (dot(x_deriv, x_deriv), dot(y_deriv, y_deriv));
+}
+
+float ComputeMipMapLevel(float2 uv, float2 size, float scale)
+{
+	float d = ComputeScaleFactorSq (uv, size, scale);
+	
+    return max((0.5 * log2 (d) - 2), 0);
+}
+
+float ComputeFractionalLevel (float2 uv, float2 size, float scale, float lowerMipLevel)
+{
+	return frac(ComputeMipMapLevel (uv, size, scale));
+}

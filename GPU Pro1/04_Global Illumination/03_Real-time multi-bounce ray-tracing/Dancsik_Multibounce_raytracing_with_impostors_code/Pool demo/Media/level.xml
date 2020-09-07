@@ -1,0 +1,129 @@
+<level>
+  <mesh name="omni" xFileName="Media\\omnilight.x" autoShadedMesh="false" />
+  <shadedMesh name="omniLight" mesh="omni" >
+    <role name="default">
+      <material technique="DiffuseColored">
+        <vector name="kdColor" v0="1" v1="1" v2="1" v3="1" />
+      </material>
+    </role>
+  </shadedMesh>
+  
+  <mesh name="room" xFileName="Media\\room.x" autoShadedMesh="false" />
+	<shadedMesh name="roooom" mesh="room" >
+		<role name="default">
+			<material technique="DiffuseTextured">
+				<texture name="diffuseMap" file="room_diffuse.png" />
+        <vector name="kdColor" v0="1" v1="1" v2="1" v3="1" />
+			</material>
+		</role>
+    <role name="storeColorAndUVDistance">
+      <material technique="CreateEnvironmentMapDiffuse">
+        <vector name="id" v0="1" v1="0" v2="0" v3="0" />
+      </material>
+    </role>
+	</shadedMesh>
+
+
+  <mesh name="pool" xFileName="Media\\pool.x" autoShadedMesh="false" />
+  <shadedMesh name="pooool" mesh="pool" >
+    <role name="default">
+      <material technique="Glass">
+      </material>
+    </role>
+    <role name="storeColorDistance">
+      <material technique="CreateEnvironmentMapGlass">
+      </material>
+    </role>
+  </shadedMesh>
+  
+  <mesh name="poolwater" xFileName="Media\\poolwater.x" autoShadedMesh="false"/>
+  <shadedMesh name="waterPlane" mesh="poolwater" >
+    <role name="default">
+      <material technique="Water">
+      </material>
+    </role>
+    <role name="createPhotonMap">
+      <material technique="PhotonMapWater">
+			</material>
+		</role>
+  </shadedMesh>
+
+  <mesh name="poolunderwater" xFileName="Media\\poolunderwater.x" autoShadedMesh="false"/>
+  <shadedMesh name="waterVolume" mesh="poolunderwater" >
+    <role name="default">
+      <material technique="UnderWater">
+      </material>
+    </role>
+  </shadedMesh>
+
+  <mesh name="spheremesh" xFileName="Media\\refractor_sphere.x" autoShadedMesh="false"/>
+  <shadedMesh name="refractorSphere" mesh="spheremesh" refractor="true">
+    <role name="default">
+      <material technique="Refractor">
+      </material>
+    </role>
+    <role name="storeNormalDistance">
+      <material technique="CreateRefractorDistanceMap">
+      </material>
+    </role>
+    <role name="createPhotonMap">
+      <material technique="PhotonMapRefractor">
+      </material>
+    </role>
+   </shadedMesh>
+
+  <mesh name="quad" xFileName="Media\\quad.x" autoShadedMesh="false"/>
+  <shadedMesh name="quad" mesh="quad" >
+    <role name="createWaterHeightMap">
+      <material technique="CreateWaterHeightMap">
+        <texture name="waweNormalMap" file="waveNormal.dds" />
+        <vector name="Amplitudes" v0="0" v1="0" v2="2" v3="0" />
+        <vector name="TimeFreq" v0="2" v1="1.59" v2="0.55" v3="1.8" />
+        <vector name="SpaceFreq" v0="0.6" v1="0.35" v2="0.05" v3="0.1" />
+        <vector name="WaveDirX" v0="0.01" v1="0.96" v2="1" v3="0.9" />
+        <vector name="WaveDirZ" v0="1.07" v1="-0.04" v2="0" v3="-1" />
+      </material>
+    </role>
+    <role name="createSphereGeometryImage">
+      <material technique="CreateSphereGeometryImage" />
+    </role>
+    <role name="createMinMaxMaps">
+      <material technique="CreateMinMaxMaps" />
+    </role>
+    <role name="copyMinMaxMipMap">
+      <material technique="CopyMinMaxMipMap" />
+    </role>
+    <role name="createLinkMap">
+      <material technique="CreateLinkMap" />
+    </role>
+    <role name="copyLinkMap">
+      <material technique="CopyMinMaxMipMap" />
+    </role>
+  </shadedMesh>
+
+  <Spotlight name="fixed"	
+	pos.x="0" pos.y="72" pos.z="0"
+	dir.x="0" dir.y="-1" dir.z="0"
+	power.r="80000" power.g="80000" power.b="80000"	focus="3" />
+  
+  <rigidModel name="sphererigid" invMass="0.000000092" centreOfMassX="0" centreOfMassY="0.1" centreOfMassZ="0" invAngularMassX="0.000000001" invAngularMassY="0.000000001" invAngularMassZ="0.000000001" />
+
+  <group>
+    <entity name="fullScreenQuadEntity" shadedMesh="quad"/>
+    <entity name="lightEntity" p0="0" p1="72" p2="0" shadedMesh="omniLight"/>
+    <entity name="roomEntity" p0="-130.3" p1="27.9" p2="1.85" shadedMesh="roooom"/>
+    <rigidBody name="refractorEntity" p0="0" p1="0" p2="0" shadedMesh="refractorSphere" rigidModel="sphererigid"/>
+    <environmentMappedEntity name="envmapEntity" p0="0" p1="0" p2="0" shadedMesh="waterPlane"
+      envMapPos.x="0" envMapPos.y="0" envMapPos.z="0">
+      <refractor name="refractorEntity"/>
+      <causticLight name="fixed"/>
+    </environmentMappedEntity>
+    <group>
+      <entity name="underwaterEntity" p0="0" p1="0" p2="0" shadedMesh="waterVolume"/>
+    </group>
+    <group>
+      <entity name="poolEntity" p0="0" p1="0" p2="0" shadedMesh="pooool"/>
+    </group>
+  </group>
+  
+</level>

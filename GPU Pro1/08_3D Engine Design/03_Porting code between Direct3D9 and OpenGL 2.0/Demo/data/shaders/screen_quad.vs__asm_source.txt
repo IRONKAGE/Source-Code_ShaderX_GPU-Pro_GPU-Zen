@@ -1,0 +1,18 @@
+vs_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile vs_3_0 -entry main
+// source file: data/shaders/screen_quad.vs
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile vs_3_0
+//program main
+//var float4 input.position : $vin.POSITION0 : ATTR0 : 0 : 1
+//var float2 input.texCoord0 : $vin.TEXCOORD0 : ATTR1 : 0 : 1
+//var float4 main.position : $vout.POSITION : ATTR0 : -1 : 1
+//var float2 main.texCoord0 : $vout.TEXCOORD0 : ATTR1 : -1 : 1
+dcl_position o0
+dcl_texcoord0 o1
+dcl_position0 v0
+dcl_texcoord0 v1
+mov o0, v0
+mov o1.xy, v1

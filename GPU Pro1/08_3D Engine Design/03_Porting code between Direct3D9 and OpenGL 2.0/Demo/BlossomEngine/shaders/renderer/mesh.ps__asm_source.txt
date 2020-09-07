@@ -1,0 +1,41 @@
+ps_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile ps_3_0 -entry main
+// source file: ./BlossomEngine/shaders/renderer/mesh.ps
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile ps_3_0
+//program main
+//semantic diffuseMap : TEXUNIT0
+//semantic normalMap : TEXUNIT1
+//var float3 input.normal : $vin.TEXCOORD0 : ATTR0 : 0 : 1
+//var float2 input.texCoord0 : $vin.TEXCOORD1 : ATTR1 : 0 : 1
+//var float3 input.lightDirection : $vin.TEXCOORD2 : ATTR2 : 0 : 1
+//var sampler2D diffuseMap : TEXUNIT0 : texunit 0 : -1 : 1
+//var sampler2D normalMap : TEXUNIT1 : texunit 1 : -1 : 1
+//var float4 main.color : $vout.COLOR : COL : -1 : 1
+//const c[0] = 2 -1
+dcl_2d s1
+dcl_2d s0
+def c0, 2.00000000, -1.00000000, 0, 0
+dcl_texcoord0 v0.xyz
+dcl_texcoord1 v1.xy
+dcl_texcoord2 v2.xyz
+texld r0.xyz, v1, s1
+mad r1.xyz, r0, c0.x, c0.y
+dp3 r0.x, r1, r1
+rsq r0.w, r0.x
+dp3 r0.y, v0, v0
+rsq r0.y, r0.y
+dp3 r0.x, v2, v2
+mul r2.xyz, r0.y, v0
+rsq r0.x, r0.x
+mul r0.xyz, r0.x, v2
+dp3 r1.w, -r0, r2
+mul r1.xyz, r0.w, r1
+dp3_sat r1.x, -r0, r1
+texld r0, v1, s0
+mul_sat r1.w, r1, c0.x
+mul r0.xyz, r0, r1.x
+mul oC0.xyz, r0, r1.w
+mov oC0.w, r0

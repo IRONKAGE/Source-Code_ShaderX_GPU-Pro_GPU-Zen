@@ -1,0 +1,23 @@
+ps_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile ps_3_0 -entry main -DRNDR_D3D
+// source file: data/shaders/screen_quad.ps
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile ps_3_0
+//program main
+//semantic scene : TEXUNIT0
+//semantic texelHalfWidth
+//semantic texelHalfHeight
+//var float2 input.texCoord0 : $vin.TEXCOORD0 : ATTR0 : 0 : 1
+//var sampler2D scene : TEXUNIT0 : texunit 0 : -1 : 1
+//var float texelHalfWidth :  : c[0] : -1 : 1
+//var float texelHalfHeight :  : c[1] : -1 : 1
+//var float4 main.color : $vout.COLOR : COL : -1 : 1
+dcl_2d s0
+dcl_texcoord0 v0.xy
+mov r0.y, c1.x
+mov r0.x, c0
+add r0.xy, v0, r0
+texld r0, r0, s0
+mov oC0, r0

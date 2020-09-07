@@ -1,0 +1,42 @@
+/* $Id: mesh.ps 126 2009-08-22 17:08:39Z maxest $ */
+
+
+
+sampler2D diffuseMap: register(s0);
+sampler2D normalMap: register(s1);
+
+
+
+struct PS_INPUT
+{
+	float3 normal: TEXCOORD0;
+	float2 texCoord0: TEXCOORD1;
+	float3 lightDirection: TEXCOORD2;
+};
+
+
+
+struct PS_OUTPUT
+{
+	float4 color: COLOR;
+};
+
+
+
+PS_OUTPUT main(PS_INPUT input)
+{
+	PS_OUTPUT output;
+
+	input.normal = normalize(input.normal);
+	input.lightDirection = normalize(input.lightDirection);
+
+	float3 pixelNormal = normalize(2.0*tex2D(normalMap, input.texCoord0).xyz - 1.0);
+
+	output.color.xyz =
+		tex2D(diffuseMap, input.texCoord0).xyz *
+		saturate(dot(-input.lightDirection, pixelNormal)) *
+		saturate(2.0 * dot(-input.lightDirection, input.normal)); // eliminates false backward lighting caused by pixelNormal shading
+	output.color.a = tex2D(diffuseMap, input.texCoord0).a;
+
+	return output;
+}

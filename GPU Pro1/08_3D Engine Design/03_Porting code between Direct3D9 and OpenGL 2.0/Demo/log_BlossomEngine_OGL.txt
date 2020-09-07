@@ -1,0 +1,80 @@
+OK: Application start
+OK: Renderer start, OpenGL 2.1.2, NVIDIA Corporation, GeForce 8400M GS/PCI/SSE2/3DNOW!
+	OK: vertex declaration created (reference counter = 1)
+	OK: vertex declaration created (reference counter = 2)
+	OK: vertex declaration created (reference counter = 3)
+	OK: shader compiled and loaded, ./BlossomEngine/shaders/renderer/mesh_static.vs (reference counter = 1)
+	OK: shader compiled and loaded, ./BlossomEngine/shaders/renderer/mesh_animation.vs (reference counter = 2)
+	OK: shader compiled and loaded, ./BlossomEngine/shaders/renderer/mesh_animation_interpolation.vs (reference counter = 3)
+	OK: shader compiled and loaded, ./BlossomEngine/shaders/renderer/sprite.vs (reference counter = 4)
+	OK: shader compiled and loaded, ./BlossomEngine/shaders/renderer/gui_entity.vs (reference counter = 5)
+	OK: shader compiled and loaded, ./BlossomEngine/shaders/renderer/mesh.ps (reference counter = 6)
+	OK: shader compiled and loaded, ./BlossomEngine/shaders/renderer/sprite.ps (reference counter = 7)
+	OK: shader compiled and loaded, ./BlossomEngine/shaders/renderer/gui_entity.ps (reference counter = 8)
+	OK: vertex declaration created (reference counter = 4)
+	OK: vertex buffer created (reference counter = 1)
+	OK: index buffer created (reference counter = 1)
+	OK: render target created (reference counter = 1)
+	OK: depthstencil surface created (reference counter = 1)
+	OK: render target created (reference counter = 2)
+	OK: depthstencil surface created (reference counter = 2)
+	OK: shader compiled and loaded, data/shaders/screen_quad.vs (reference counter = 9)
+	OK: shader compiled and loaded, data/shaders/screen_quad.ps (reference counter = 10)
+	OK: shader compiled and loaded, data/shaders/mesh_static_shadowmap.vs (reference counter = 11)
+	OK: shader compiled and loaded, data/shaders/mesh_shadowmap.ps (reference counter = 12)
+	OK: shader compiled and loaded, data/shaders/mesh_static_light.vs (reference counter = 13)
+	OK: shader compiled and loaded, data/shaders/mesh_light.ps (reference counter = 14)
+	OK: texture created (reference counter = 1)
+	OK: texture loaded from file, data/textures/grass_diffuse.jpg
+	OK: texture created (reference counter = 2)
+	OK: texture loaded from file, data/textures/brick_diffuse.jpg
+	OK: texture created (reference counter = 3)
+	OK: texture loaded from file, data/textures/grass_normal.jpg
+	OK: texture created (reference counter = 4)
+	OK: texture loaded from file, data/textures/brick_normal.jpg
+	OK: vertex buffer created (reference counter = 2)
+	OK: index buffer created (reference counter = 2)
+	OK: mesh loaded from file, data/meshes/terrain.mdl
+	OK: vertex buffer created (reference counter = 3)
+	OK: index buffer created (reference counter = 3)
+	OK: mesh loaded from file, data/meshes/stuff.mdl
+	OK: vertex buffer freed (reference counter = 2)
+	OK: index buffer freed (reference counter = 2)
+	OK: vertex buffer freed (reference counter = 1)
+	OK: index buffer freed (reference counter = 1)
+	OK: texture freed (reference counter = 3)
+	OK: texture freed (reference counter = 2)
+	OK: texture freed (reference counter = 1)
+	OK: texture freed (reference counter = 0)
+	OK: shader freed (reference counter = 13)
+	OK: shader freed (reference counter = 12)
+	OK: shader freed (reference counter = 11)
+	OK: shader freed (reference counter = 10)
+	OK: shader freed (reference counter = 9)
+	OK: shader freed (reference counter = 8)
+	OK: vertex declaration freed (reference counter = 3)
+	OK: vertex buffer freed (reference counter = 0)
+	OK: index buffer freed (reference counter = 0)
+	OK: render target freed (reference counter = 1)
+	OK: depthstencil surface freed (reference counter = 1)
+	OK: render target freed (reference counter = 0)
+	OK: depthstencil surface freed (reference counter = 0)
+	OK: vertex declaration freed (reference counter = 2)
+	OK: vertex declaration freed (reference counter = 1)
+	OK: vertex declaration freed (reference counter = 0)
+	OK: shader freed (reference counter = 7)
+	OK: shader freed (reference counter = 6)
+	OK: shader freed (reference counter = 5)
+	OK: shader freed (reference counter = 4)
+	OK: shader freed (reference counter = 3)
+	OK: shader freed (reference counter = 2)
+	OK: shader freed (reference counter = 1)
+	OK: shader freed (reference counter = 0)
+OK: Renderer quit
+	Render targets reference counter: 0
+	DepthStencil surfaces reference counter: 0
+	Vertex declarations reference counter: 0
+	Vertex buffers reference counter: 0
+	Shaders reference counter: 0
+	Textures reference counter: 0
+OK: Application quit

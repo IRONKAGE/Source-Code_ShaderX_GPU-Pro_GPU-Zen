@@ -1,0 +1,51 @@
+ps_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile ps_3_0 -entry main
+// source file: data/shaders/mesh_light.ps
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile ps_3_0
+//program main
+//semantic diffuseMap : TEXUNIT0
+//semantic normalMap : TEXUNIT1
+//semantic shadowMap : TEXUNIT2
+//var float3 input.normal : $vin.TEXCOORD0 : ATTR0 : 0 : 1
+//var float2 input.texCoord0 : $vin.TEXCOORD1 : ATTR1 : 0 : 1
+//var float3 input.lightDirection : $vin.TEXCOORD2 : ATTR2 : 0 : 1
+//var float4 input.projShadowMapTexCoord : $vin.TEXCOORD3 : ATTR3 : 0 : 1
+//var sampler2D diffuseMap : TEXUNIT0 : texunit 0 : -1 : 1
+//var sampler2D normalMap : TEXUNIT1 : texunit 1 : -1 : 1
+//var sampler2D shadowMap : TEXUNIT2 : texunit 2 : -1 : 1
+//var float4 main.color : $vout.COLOR : COL : -1 : 1
+//const c[0] = 0 -0.003 2 -1
+//const c[1] = 0.1
+dcl_2d s2
+dcl_2d s1
+dcl_2d s0
+def c0, 0.00000000, -0.00300000, 2.00000000, -1.00000000
+def c1, 0.10000000, 0, 0, 0
+dcl_texcoord0 v0.xyz
+dcl_texcoord1 v1.xy
+dcl_texcoord2 v2.xyz
+dcl_texcoord3 v3
+texld r0.xyz, v1, s1
+mad r1.xyz, r0, c0.z, c0.w
+dp3 r0.x, r1, r1
+rsq r0.w, r0.x
+dp3 r0.y, v0, v0
+rsq r0.y, r0.y
+dp3 r0.x, v2, v2
+mul r2.xyz, r0.y, v0
+rsq r0.x, r0.x
+mul r0.xyz, r0.x, v2
+dp3 r1.w, -r0, r2
+mul r1.xyz, r0.w, r1
+dp3_sat r2.y, -r0, r1
+mul_sat r2.x, r1.w, c0.z
+add r0, v3, c0.xxyx
+texld r1, v1, s0
+texldp r0.x, r0, s2
+mul r0, r0.x, r1
+mul r0, r0, r2.y
+mul r0, r0, r2.x
+mad oC0, r1, c1.x, r0

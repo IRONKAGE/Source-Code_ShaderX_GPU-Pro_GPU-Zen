@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo", "Demo.vcproj", "{B40C824E-B022-4CCA-B224-0323A7B4F361}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_D3D9|Win32 = Debug_D3D9|Win32
+		Debug_OGL|Win32 = Debug_OGL|Win32
+		Debug|Win32 = Debug|Win32
+		Release_D3D9|Win32 = Release_D3D9|Win32
+		Release_OGL|Win32 = Release_OGL|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Debug_D3D9|Win32.ActiveCfg = Debug_D3D9|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Debug_D3D9|Win32.Build.0 = Debug_D3D9|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Debug_OGL|Win32.ActiveCfg = Debug_OGL|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Debug_OGL|Win32.Build.0 = Debug_OGL|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Debug|Win32.Build.0 = Debug|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Release_D3D9|Win32.ActiveCfg = Release_D3D9|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Release_D3D9|Win32.Build.0 = Release_D3D9|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Release_OGL|Win32.ActiveCfg = Release_OGL|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Release_OGL|Win32.Build.0 = Release_OGL|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Release|Win32.ActiveCfg = Release|Win32
+		{B40C824E-B022-4CCA-B224-0323A7B4F361}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

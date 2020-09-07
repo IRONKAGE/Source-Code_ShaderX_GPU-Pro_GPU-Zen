@@ -1,0 +1,34 @@
+sampler2D scene: register(s0);
+
+float texelHalfWidth;
+float texelHalfHeight;
+
+
+
+struct PS_INPUT
+{
+	float2 texCoord0: TEXCOORD0;
+};
+
+
+
+struct PS_OUTPUT
+{
+	float4 color: COLOR;
+};
+
+
+
+PS_OUTPUT main(PS_INPUT input)
+{
+	PS_OUTPUT output;
+
+	float2 shift = float2(0.0, 0.0);
+	#ifdef RNDR_D3D // due to Direct3D's sampling rules we need do the half-pixel shifting to avoid unwanted additional texture filtering
+		shift = float2(texelHalfWidth, texelHalfHeight);
+	#endif
+
+	output.color = tex2D(scene, input.texCoord0 + shift);
+
+	return output;
+}

@@ -1,0 +1,23 @@
+cbuffer camera
+{
+	float4x4	WorldViewProjection : WorldViewProjection;
+}
+
+struct VS_OUTPUT
+{
+	float4	Position	: SV_POSITION;
+	float2	UV			: TEXCOORD0;
+};
+
+VS_OUTPUT VS_Main  (
+	float4	Pos		: POSITION,
+	float2	UV		: TEXCOORD0,
+	float3  Normal	: NORMAL)
+{
+	VS_OUTPUT OUT = (VS_OUTPUT)0;
+	
+	OUT.Position =  mul(Pos, WorldViewProjection);
+	OUT.UV = UV;
+	
+	return OUT;
+}

@@ -1,0 +1,130 @@
+vs_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile vs_3_0 -entry main
+// source file: ./BlossomEngine/shaders/renderer/mesh_animation_interpolation.vs
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile vs_3_0
+//program main
+//semantic worldTransform
+//semantic worldTransformInversed
+//semantic animationMatrices1
+//semantic animationMatrices2
+//semantic viewProjTransform
+//semantic interpolationProgress
+//var float4 input.position : $vin.POSITION0 : ATTR0 : 0 : 1
+//var float3 input.normal : $vin.NORMAL0 : ATTR1 : 0 : 1
+//var float3 input.tangent : $vin.TEXCOORD0 : ATTR2 : 0 : 1
+//var float3 input.bitangent : $vin.TEXCOORD1 : ATTR3 : 0 : 1
+//var float2 input.texCoord0 : $vin.TEXCOORD2 : ATTR4 : 0 : 1
+//var float input.nodeIndex : $vin.TEXCOORD3 : ATTR5 : 0 : 1
+//var float4x4 worldTransform :  : c[0], 4 : -1 : 1
+//var float4x4 worldTransformInversed :  : c[4], 4 : -1 : 1
+//var float4x4 animationMatrices1[0] :  : c[8], 4 : -1 : 1
+//var float4x4 animationMatrices1[1] :  : c[12], 4 : -1 : 1
+//var float4x4 animationMatrices1[2] :  : c[16], 4 : -1 : 1
+//var float4x4 animationMatrices1[3] :  : c[20], 4 : -1 : 1
+//var float4x4 animationMatrices1[4] :  : c[24], 4 : -1 : 1
+//var float4x4 animationMatrices1[5] :  : c[28], 4 : -1 : 1
+//var float4x4 animationMatrices1[6] :  : c[32], 4 : -1 : 1
+//var float4x4 animationMatrices1[7] :  : c[36], 4 : -1 : 1
+//var float4x4 animationMatrices1[8] :  : c[40], 4 : -1 : 1
+//var float4x4 animationMatrices1[9] :  : c[44], 4 : -1 : 1
+//var float4x4 animationMatrices2[0] :  : c[48], 4 : -1 : 1
+//var float4x4 animationMatrices2[1] :  : c[52], 4 : -1 : 1
+//var float4x4 animationMatrices2[2] :  : c[56], 4 : -1 : 1
+//var float4x4 animationMatrices2[3] :  : c[60], 4 : -1 : 1
+//var float4x4 animationMatrices2[4] :  : c[64], 4 : -1 : 1
+//var float4x4 animationMatrices2[5] :  : c[68], 4 : -1 : 1
+//var float4x4 animationMatrices2[6] :  : c[72], 4 : -1 : 1
+//var float4x4 animationMatrices2[7] :  : c[76], 4 : -1 : 1
+//var float4x4 animationMatrices2[8] :  : c[80], 4 : -1 : 1
+//var float4x4 animationMatrices2[9] :  : c[84], 4 : -1 : 1
+//var float4x4 viewProjTransform :  : c[88], 4 : -1 : 1
+//var float interpolationProgress :  : c[92] : -1 : 1
+//var float4 main.position : $vout.POSITION : ATTR0 : -1 : 1
+//var float3 main.normal : $vout.TEXCOORD0 : ATTR1 : -1 : 1
+//var float2 main.texCoord0 : $vout.TEXCOORD1 : ATTR2 : -1 : 1
+//var float3 main.lightDirection : $vout.TEXCOORD2 : ATTR3 : -1 : 1
+//const c[93] = 4 1
+dcl_position0 v0
+dcl_normal0 v1
+dcl_texcoord0 v2
+dcl_texcoord1 v3
+dcl_texcoord2 v4
+dcl_texcoord3 v5
+dcl_position o0
+dcl_texcoord0 o1
+dcl_texcoord1 o2
+dcl_texcoord2 o3
+def c93, 4.00000000, 1.00000000, 0, 0
+frc r0.x, v5
+add r0.x, v5, -r0
+mul r0.x, r0, c93
+mova a0.x, r0
+mul r0, v0.y, c[a0.x + 9]
+mul r1, v0.y, c[a0.x + 49]
+mad r0, v0.x, c[a0.x + 8], r0
+mad r1, v0.x, c[a0.x + 48], r1
+mad r0, v0.z, c[a0.x + 10], r0
+mad r0, v0.w, c[a0.x + 11], r0
+mul r2, r0.y, c1
+mad r2, r0.x, c0, r2
+mad r2, r0.z, c2, r2
+mad r1, v0.z, c[a0.x + 50], r1
+mad r1, v0.w, c[a0.x + 51], r1
+mul r3, r1.y, c1
+mad r3, r1.x, c0, r3
+mad r3, r1.z, c2, r3
+mad r2, r0.w, c3, r2
+mad r0, r1.w, c3, r3
+mul r1, r0, c92.x
+mov r3.x, c92
+add r0.w, c93.y, -r3.x
+mad r1, r2, r0.w, r1
+mul r2, r1.y, c89
+mad r2, r1.x, c88, r2
+mad r2, r1.z, c90, r2
+mul r1.xyz, c[a0.x + 49], v2.y
+mad o0, r1.w, c91, r2
+mad r2.xyz, c[a0.x + 48], v2.x, r1
+mul r1.xyz, c[a0.x + 9], v2.y
+mad r2.xyz, c[a0.x + 50], v2.z, r2
+mad r1.xyz, c[a0.x + 8], v2.x, r1
+mul r0.xyz, c[a0.x + 49], v3.y
+mul r2.xyz, r2, c92.x
+mad r1.xyz, c[a0.x + 10], v2.z, r1
+mad r5.xyz, r0.w, r1, r2
+mad r1.xyz, c[a0.x + 48], v3.x, r0
+mul r0.xyz, c[a0.x + 9], v3.y
+mad r1.xyz, c[a0.x + 50], v3.z, r1
+mad r0.xyz, c[a0.x + 8], v3.x, r0
+mov r2.xyz, c4
+add r2.xyz, -c5, -r2
+mul r1.xyz, r1, c92.x
+mad r0.xyz, c[a0.x + 10], v3.z, r0
+mad r4.xyz, r0.w, r0, r1
+mov r1.y, r4
+mul r0.xyz, c[a0.x + 49], v1.y
+mad r3.xyz, c[a0.x + 48], v1.x, r0
+mul r0.xyz, c[a0.x + 9], v1.y
+mad r3.xyz, c[a0.x + 50], v1.z, r3
+mad r0.xyz, c[a0.x + 8], v1.x, r0
+add r2.xyz, r2, -c6
+mov r4.y, r5.x
+mov r1.x, r5.y
+mul r3.xyz, r3, c92.x
+mad r0.xyz, c[a0.x + 10], v1.z, r0
+mad r0.xyz, r0.w, r0, r3
+mov r1.z, r0.y
+mul r3.xyz, r0.y, r1
+mov r4.w, r0.x
+mul r1.xyz, r1, r2.y
+mad r3.xyz, r0.x, r4.yxww, r3
+mad r1.xyz, r4.yxww, r2.x, r1
+mov r4.y, r4.z
+mov r4.x, r5.z
+mov r4.z, r0
+mad o1.xyz, r0.z, r4, r3
+mad o3.xyz, r4, r2.z, r1
+mov o2.xy, v4

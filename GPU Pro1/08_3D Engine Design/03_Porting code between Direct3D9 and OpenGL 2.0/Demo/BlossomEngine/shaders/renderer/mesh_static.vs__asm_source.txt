@@ -1,0 +1,59 @@
+vs_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile vs_3_0 -entry main
+// source file: ./BlossomEngine/shaders/renderer/mesh_static.vs
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile vs_3_0
+//program main
+//semantic worldTransform
+//semantic worldTransformInversed
+//semantic viewProjTransform
+//var float4 input.position : $vin.POSITION0 : ATTR0 : 0 : 1
+//var float3 input.normal : $vin.NORMAL0 : ATTR1 : 0 : 1
+//var float3 input.tangent : $vin.TEXCOORD0 : ATTR2 : 0 : 1
+//var float3 input.bitangent : $vin.TEXCOORD1 : ATTR3 : 0 : 1
+//var float2 input.texCoord0 : $vin.TEXCOORD2 : ATTR4 : 0 : 1
+//var float4x4 worldTransform :  : c[0], 4 : -1 : 1
+//var float4x4 worldTransformInversed :  : c[4], 4 : -1 : 1
+//var float4x4 viewProjTransform :  : c[8], 4 : -1 : 1
+//var float4 main.position : $vout.POSITION : ATTR0 : -1 : 1
+//var float3 main.normal : $vout.TEXCOORD0 : ATTR1 : -1 : 1
+//var float2 main.texCoord0 : $vout.TEXCOORD1 : ATTR2 : -1 : 1
+//var float3 main.lightDirection : $vout.TEXCOORD2 : ATTR3 : -1 : 1
+dcl_position o0
+dcl_texcoord0 o1
+dcl_texcoord1 o2
+dcl_texcoord2 o3
+dcl_position0 v0
+dcl_normal0 v1
+dcl_texcoord0 v2
+dcl_texcoord1 v3
+dcl_texcoord2 v4
+mul r0, v0.y, c1
+mad r0, v0.x, c0, r0
+mad r0, v0.z, c2, r0
+mad r2, v0.w, c3, r0
+mul r0, r2.y, c9
+mad r0, r2.x, c8, r0
+mad r0, r2.z, c10, r0
+mad o0, r2.w, c11, r0
+mov r1.xyz, c4
+add r1.xyz, -c5, -r1
+add r3.xyz, r1, -c6
+mov r0.x, v2.y
+mov r0.y, v3
+mov r0.z, v1.y
+mul r2.xyz, r0, r3.y
+mul r1.xyz, v1.y, r0
+mov r0.x, v2
+mov r0.y, v3.x
+mov r0.z, v1.x
+mad r2.xyz, r0, r3.x, r2
+mad r1.xyz, v1.x, r0, r1
+mov r0.x, v2.z
+mov r0.y, v3.z
+mov r0.z, v1
+mad o3.xyz, r0, r3.z, r2
+mad o1.xyz, v1.z, r0, r1
+mov o2.xy, v4

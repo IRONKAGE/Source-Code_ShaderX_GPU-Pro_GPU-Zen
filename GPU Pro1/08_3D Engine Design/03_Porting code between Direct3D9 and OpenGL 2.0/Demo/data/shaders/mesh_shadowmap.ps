@@ -1,0 +1,26 @@
+sampler2D diffuseMap: register(s0);
+
+
+
+struct PS_INPUT
+{
+	float2 texCoord0: TEXCOORD0;
+};
+
+
+
+struct PS_OUTPUT
+{
+	float4 color: COLOR;
+};
+
+
+
+PS_OUTPUT main(PS_INPUT input)
+{
+	PS_OUTPUT output;
+
+	output.color = 0.0;
+
+	return output;
+}

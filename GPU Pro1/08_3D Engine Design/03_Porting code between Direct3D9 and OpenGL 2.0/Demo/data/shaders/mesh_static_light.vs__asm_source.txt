@@ -1,0 +1,72 @@
+vs_3_0
+// cgc version 2.2.0006, build date Mar 31 2009
+// command line args: -q -profile vs_3_0 -entry main
+// source file: data/shaders/mesh_static_light.vs
+//vendor NVIDIA Corporation
+//version 2.2.0.6
+//profile vs_3_0
+//program main
+//semantic worldTransform
+//semantic worldTransformInversed
+//semantic viewProjTransform
+//semantic lightViewProjTransform
+//semantic lightDirection
+//var float4 input.position : $vin.POSITION0 : ATTR0 : 0 : 1
+//var float3 input.normal : $vin.NORMAL0 : ATTR1 : 0 : 1
+//var float3 input.tangent : $vin.TEXCOORD0 : ATTR2 : 0 : 1
+//var float3 input.bitangent : $vin.TEXCOORD1 : ATTR3 : 0 : 1
+//var float2 input.texCoord0 : $vin.TEXCOORD2 : ATTR4 : 0 : 1
+//var float4x4 worldTransform :  : c[0], 4 : -1 : 1
+//var float4x4 worldTransformInversed :  : c[4], 4 : -1 : 1
+//var float4x4 viewProjTransform :  : c[8], 4 : -1 : 1
+//var float4x4 lightViewProjTransform :  : c[12], 4 : -1 : 1
+//var float3 lightDirection :  : c[16] : -1 : 1
+//var float4 main.position : $vout.POSITION : ATTR0 : -1 : 1
+//var float3 main.normal : $vout.TEXCOORD0 : ATTR1 : -1 : 1
+//var float2 main.texCoord0 : $vout.TEXCOORD1 : ATTR2 : -1 : 1
+//var float3 main.lightDirection : $vout.TEXCOORD2 : ATTR3 : -1 : 1
+//var float4 main.projShadowMapTexCoord : $vout.TEXCOORD3 : ATTR4 : -1 : 1
+dcl_position o0
+dcl_texcoord0 o1
+dcl_texcoord1 o2
+dcl_texcoord2 o3
+dcl_texcoord3 o4
+dcl_position0 v0
+dcl_normal0 v1
+dcl_texcoord0 v2
+dcl_texcoord1 v3
+dcl_texcoord2 v4
+mul r0, v0.y, c1
+mad r0, v0.x, c0, r0
+mad r0, v0.z, c2, r0
+mad r1, v0.w, c3, r0
+mul r0, r1.y, c9
+mad r0, r1.x, c8, r0
+mad r0, r1.z, c10, r0
+mad o0, r1.w, c11, r0
+mov r2.x, c16.y
+mov r0.x, c16
+mul r2.xyz, c5, r2.x
+mad r2.xyz, c4, r0.x, r2
+mov r0.x, c16.z
+mad r4.xyw, c6.xyzz, r0.x, r2.xyzz
+mov r0.x, v2.y
+mov r0.y, v3
+mov r0.z, v1.y
+mul r2.xyz, r0, r4.y
+mov r3.x, v2
+mov r3.y, v3.x
+mov r3.z, v1.x
+mad r4.xyz, r3, r4.x, r2
+mul r2, r1.y, c13
+mad r2, r1.x, c12, r2
+mul r0.xyz, v1.y, r0
+mad r2, r1.z, c14, r2
+mov r5.x, v2.z
+mov r5.y, v3.z
+mov r5.z, v1
+mad r0.xyz, v1.x, r3, r0
+mad o3.xyz, r5, r4.w, r4
+mad o4, r1.w, c15, r2
+mad o1.xyz, v1.z, r5, r0
+mov o2.xy, v4

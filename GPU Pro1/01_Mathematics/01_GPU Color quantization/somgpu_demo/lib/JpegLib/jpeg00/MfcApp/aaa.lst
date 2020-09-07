@@ -1,0 +1,17 @@
+*.cpp
+*.c
+*.h
+*.bmp
+*.ico
+*.rc
+*.rc2
+*.dsp
+*.dsw
+*.cur
+*.sgl
+*.hpj
+*.hm
+*.cnt
+*.rtf
+*.bat
+*.bin
