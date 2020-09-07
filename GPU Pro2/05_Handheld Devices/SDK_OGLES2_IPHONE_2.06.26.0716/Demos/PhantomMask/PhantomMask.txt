@@ -1,0 +1,14 @@
+
+Demo title: 		PhantomMask
+
+Demonstrates: 		Spherical Harmonics Lighting
+
+Short Description:	Shows a mask lit using spherical harmonics and regular diffuse vertex lighting. 
+
+Full Description:	
+Shows a mask lit using spherical harmonics and regular diffuse vertex lighting. 
+
+Polygon Count: 		3500
+Vertex Count: 		2200
+
+

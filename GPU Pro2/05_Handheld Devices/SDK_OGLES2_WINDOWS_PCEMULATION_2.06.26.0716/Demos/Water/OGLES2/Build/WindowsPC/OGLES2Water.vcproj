@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="OGLES2Water"
+	ProjectGUID="{DA225857-C79C-4026-8D2F-57A2D3FF079C}"
+	RootNamespace="OGLES2Water"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\..\..\..\..\Shell;..\..\..\..\..\Shell\API\KEGL;..\..\..\..\..\Shell\OS\Windows;..\..\..\..\..\Builds\OGLES2\Include;..\..\..\..\..\Builds\OGLES2\WindowsPC\Include;..\..\..\..\..\Tools\OGLES2;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;BUILD_OGLES2"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="0"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="libEGL.lib libGLESv2.lib OGLES2Tools.lib"
+				OutputFile="$(OutDir)/OGLES2Water.exe"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="..\..\..\..\..\Builds\OGLES2\WindowsPC\Lib;..\..\..\..\..\Tools\OGLES2\Build\WindowsPC\$(OUTDIR);"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile="$(OutDir)/OGLES2Water.pdb"
+				SubSystem="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\..\..\..\..\Shell;..\..\..\..\..\Shell\API\KEGL;..\..\..\..\..\Shell\OS\Windows;..\..\..\..\..\Builds\OGLES2\Include;..\..\..\..\..\Builds\OGLES2\WindowsPC\Include;..\..\..\..\..\Tools\OGLES2;"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;BUILD_OGLES2"
+				RuntimeLibrary="0"
+				UsePrecompiledHeader="0"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="libEGL.lib libGLESv2.lib OGLES2Tools.lib"
+				OutputFile="$(OutDir)/OGLES2Water.exe"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="..\..\..\..\..\Builds\OGLES2\WindowsPC\Lib; ..\..\..\..\..\Tools\OGLES2\Build\WindowsPC\$(OUTDIR);"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath="..\..\OGLES2Water.cpp">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\PVRShell.cpp">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\Api\Kegl\PVRShellAPI.cpp">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\Os\Windows\PVRShellOS.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath="..\..\..\..\..\Shell\PVRShell.h">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\Api\Kegl\PVRShellAPI.h">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\PVRShellImpl.h">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\Os\Windows\PVRShellOS.h">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Builds\Windows\resource.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath="..\..\..\..\..\Builds\Windows\shared.rc">
+			</File>
+		</Filter>
+		<Filter
+			Name="Content Files"
+			Filter="">
+			<Filter
+				Name="CPP"
+				Filter="">
+				<File
+					RelativePath="..\..\Content\NewNormalMap.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\Mountain.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\wood.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\sail.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\MountainFloor.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\FragShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\VertShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\SkyboxFShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\SkyboxVShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\ModelFShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\ModelVShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\Tex2DFShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\Tex2DVShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\PlaneTexFShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\PlaneTexVShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\Scene.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Scene Files"
+				Filter="">
+				<File
+					RelativePath="..\..\Scene.pod">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping scene file $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping scene file $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+			<Filter
+				Name="Shaders"
+				Filter="">
+				<File
+					RelativePath="..\..\FragShader.fsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\VertShader.vsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\SkyboxFShader.fsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\SkyboxVShader.vsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\ModelFShader.fsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\ModelVShader.vsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\Tex2DFShader.fsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\Tex2DVShader.vsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\PlaneTexFShader.fsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\PlaneTexVShader.vsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+
+
+			<Filter
+				Name="Textures"
+				Filter="">
+				<File
+					RelativePath="..\..\NewNormalMap.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating NewNormalMap.cpp from NewNormalMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\NewNormalMap.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\NewNormalMap.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating NewNormalMap.cpp from NewNormalMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\NewNormalMap.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\NewNormalMap.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\NewNormalMap.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating NewNormalMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -b1.0 -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\NewNormalMap.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\NewNormalMap.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating NewNormalMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -b1.0 -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\NewNormalMap.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\NewNormalMap.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\Mountain.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Mountain.cpp from Mountain.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Mountain.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Mountain.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Mountain.cpp from Mountain.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Mountain.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Mountain.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\mountain1.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Mountain.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -s -m -p -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Mountain.pvr&quot;"
+							AdditionalDependencies="$(InputDir)mountain2.png; $(InputDir)mountain3.png; $(InputDir)mountain4.png; $(InputDir)mountain5.png; $(InputDir)mountain6.png"
+							Outputs="$(ProjectDir)..\..\Mountain.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Mountain.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -s -m -p -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Mountain.pvr&quot;"
+							AdditionalDependencies="$(InputDir)mountain2.png; $(InputDir)mountain3.png; $(InputDir)mountain4.png; $(InputDir)mountain5.png; $(InputDir)mountain6.png"
+							Outputs="$(ProjectDir)..\..\Mountain.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\mountain2.png">
+				</File>
+				<File
+					RelativePath="..\..\..\Media\mountain3.png">
+				</File>
+				<File
+					RelativePath="..\..\..\Media\mountain4.png">
+				</File>
+				<File
+					RelativePath="..\..\..\Media\mountain5.png">
+				</File>
+				<File
+					RelativePath="..\..\..\Media\mountain6.png">
+				</File>
+				<File
+					RelativePath="..\..\wood.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating wood.cpp from wood.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\wood.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\wood.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating wood.cpp from wood.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\wood.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\wood.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\wood.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating wood.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\wood.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\wood.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating wood.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\wood.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\wood.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\sail.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating sail.cpp from sail.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\sail.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\sail.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating sail.cpp from sail.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\sail.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\sail.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\sail.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating sail.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\sail.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\sail.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating sail.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\sail.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\sail.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\MountainFloor.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating MountainFloor.cpp from MountainFloor.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\MountainFloor.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\MountainFloor.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating MountainFloor.cpp from MountainFloor.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\MountainFloor.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\MountainFloor.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\mountain6.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating MountainFloor.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\MountainFloor.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\MountainFloor.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating MountainFloor.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\MountainFloor.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\MountainFloor.pvr"/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+		</Filter>		
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

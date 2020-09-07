@@ -1,0 +1,16 @@
+
+Demo title: 		ChameleonMan
+
+Demonstrates: 		Skinning with DOT3 per pixel lighting
+
+Short Description:	Shows a Matrix Skinned Character in combination with DOT3 Per Pixel Lighting.
+
+Full Description:	
+The ChameleonMan demo shows a Matrix Skinned Character in combination with DOT3 Per Pixel Lighting. 
+
+
+Polygon Count: 		2400 
+Vertex Count: 		1200
+
+
+

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="OGLES2ChameleonMan"
+	ProjectGUID="{DA225857-C79C-4026-8D2F-57A2D3FF079C}"
+	RootNamespace="OGLES2ChameleonMan"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\..\..\..\..\Shell;..\..\..\..\..\Shell\API\KEGL;..\..\..\..\..\Shell\OS\Windows;..\..\..\..\..\Builds\OGLES2\Include;..\..\..\..\..\Builds\OGLES2\WindowsPC\Include;..\..\..\..\..\Tools\OGLES2;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;BUILD_OGLES2"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="0"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="libEGL.lib libGLESv2.lib OGLES2Tools.lib"
+				OutputFile="$(OutDir)/OGLES2ChameleonMan.exe"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="..\..\..\..\..\Builds\OGLES2\WindowsPC\Lib;..\..\..\..\..\Tools\OGLES2\Build\WindowsPC\$(OUTDIR);"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile="$(OutDir)/OGLES2ChameleonMan.pdb"
+				SubSystem="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\..\..\..\..\Shell;..\..\..\..\..\Shell\API\KEGL;..\..\..\..\..\Shell\OS\Windows;..\..\..\..\..\Builds\OGLES2\Include;..\..\..\..\..\Builds\OGLES2\WindowsPC\Include;..\..\..\..\..\Tools\OGLES2;"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;BUILD_OGLES2"
+				RuntimeLibrary="0"
+				UsePrecompiledHeader="0"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="libEGL.lib libGLESv2.lib OGLES2Tools.lib"
+				OutputFile="$(OutDir)/OGLES2ChameleonMan.exe"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="..\..\..\..\..\Builds\OGLES2\WindowsPC\Lib; ..\..\..\..\..\Tools\OGLES2\Build\WindowsPC\$(OUTDIR);"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath="..\..\OGLES2ChameleonMan.cpp">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\PVRShell.cpp">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\Api\Kegl\PVRShellAPI.cpp">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\Os\Windows\PVRShellOS.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath="..\..\..\..\..\Shell\PVRShell.h">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\Api\Kegl\PVRShellAPI.h">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\PVRShellImpl.h">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Shell\Os\Windows\PVRShellOS.h">
+			</File>
+			<File
+				RelativePath="..\..\..\..\..\Builds\Windows\resource.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath="..\..\..\..\..\Builds\Windows\shared.rc">
+			</File>
+		</Filter>
+		<Filter
+			Name="Content Files"
+			Filter="">
+			<Filter
+				Name="CPP"
+				Filter="">
+				<File
+					RelativePath="..\..\Content\ChameleonScene.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\skyline.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\Wall_diffuse_baked.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\Tang_space_BodyMap.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\Tang_space_LegsMap.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\Tang_space_BeltMap.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\FinalChameleonManLegs.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\FinalChameleonManHeadBody.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\lamp.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\ChameleonBelt.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\SkinnedVertShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\SkinnedFragShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\DefaultVertShader.cpp">
+				</File>
+				<File
+					RelativePath="..\..\Content\DefaultFragShader.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Scene Files"
+				Filter="">
+				<File
+					RelativePath="..\..\ChameleonScene.pod">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping scene file $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping scene file $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+			<Filter
+				Name="Shaders"
+				Filter="">
+				<File
+					RelativePath="..\..\SkinnedVertShader.vsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\SkinnedFragShader.fsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\DefaultVertShader.vsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\DefaultFragShader.fsh">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Wrapping shader $(InputFileName)"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -s -o &quot;$(InputDir)Content\$(InputName).cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\$(InputName).cpp"/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+
+
+			<Filter
+				Name="Textures"
+				Filter="">
+				<File
+					RelativePath="..\..\skyline.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating skyline.cpp from skyline.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\skyline.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\skyline.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating skyline.cpp from skyline.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\skyline.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\skyline.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\skyline.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating skyline.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\skyline.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\skyline.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating skyline.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\skyline.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\skyline.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\Wall_diffuse_baked.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Wall_diffuse_baked.cpp from Wall_diffuse_baked.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Wall_diffuse_baked.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Wall_diffuse_baked.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Wall_diffuse_baked.cpp from Wall_diffuse_baked.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Wall_diffuse_baked.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Wall_diffuse_baked.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\Wall_diffuse_baked.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Wall_diffuse_baked.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Wall_diffuse_baked.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\Wall_diffuse_baked.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Wall_diffuse_baked.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Wall_diffuse_baked.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\Wall_diffuse_baked.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\Tang_space_BodyMap.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_BodyMap.cpp from Tang_space_BodyMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Tang_space_BodyMap.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Tang_space_BodyMap.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_BodyMap.cpp from Tang_space_BodyMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Tang_space_BodyMap.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Tang_space_BodyMap.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\Tang_space_BodyMap.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_BodyMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Tang_space_BodyMap.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\Tang_space_BodyMap.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_BodyMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Tang_space_BodyMap.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\Tang_space_BodyMap.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\Tang_space_LegsMap.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_LegsMap.cpp from Tang_space_LegsMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Tang_space_LegsMap.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Tang_space_LegsMap.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_LegsMap.cpp from Tang_space_LegsMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Tang_space_LegsMap.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Tang_space_LegsMap.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\Tang_space_LegsMap.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_LegsMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Tang_space_LegsMap.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\Tang_space_LegsMap.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_LegsMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Tang_space_LegsMap.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\Tang_space_LegsMap.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\Tang_space_BeltMap.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_BeltMap.cpp from Tang_space_BeltMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Tang_space_BeltMap.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Tang_space_BeltMap.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_BeltMap.cpp from Tang_space_BeltMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\Tang_space_BeltMap.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\Tang_space_BeltMap.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\Tang_space_BeltMap.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_BeltMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Tang_space_BeltMap.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\Tang_space_BeltMap.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating Tang_space_BeltMap.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\Tang_space_BeltMap.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\Tang_space_BeltMap.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\FinalChameleonManLegs.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating FinalChameleonManLegs.cpp from FinalChameleonManLegs.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\FinalChameleonManLegs.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\FinalChameleonManLegs.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating FinalChameleonManLegs.cpp from FinalChameleonManLegs.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\FinalChameleonManLegs.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\FinalChameleonManLegs.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\FinalChameleonManLegs.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating FinalChameleonManLegs.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\FinalChameleonManLegs.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\FinalChameleonManLegs.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating FinalChameleonManLegs.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\FinalChameleonManLegs.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\FinalChameleonManLegs.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\FinalChameleonManHeadBody.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating FinalChameleonManHeadBody.cpp from FinalChameleonManHeadBody.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\FinalChameleonManHeadBody.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\FinalChameleonManHeadBody.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating FinalChameleonManHeadBody.cpp from FinalChameleonManHeadBody.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\FinalChameleonManHeadBody.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\FinalChameleonManHeadBody.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\FinalChameleonManHeadBody.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating FinalChameleonManHeadBody.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\FinalChameleonManHeadBody.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\FinalChameleonManHeadBody.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating FinalChameleonManHeadBody.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC4 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\FinalChameleonManHeadBody.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\FinalChameleonManHeadBody.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\lamp.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating lamp.cpp from lamp.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\lamp.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\lamp.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating lamp.cpp from lamp.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\lamp.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\lamp.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\lamp.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating lamp.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\lamp.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\lamp.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating lamp.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\lamp.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\lamp.pvr"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\ChameleonBelt.pvr">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating ChameleonBelt.cpp from ChameleonBelt.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\ChameleonBelt.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\ChameleonBelt.cpp"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating ChameleonBelt.cpp from ChameleonBelt.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\Filewrap\Win32\Filewrap.exe&quot; -o &quot;$(InputDir)Content\ChameleonBelt.cpp&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(InputDir)Content\ChameleonBelt.cpp"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\..\Media\ChameleonBelt.png">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating ChameleonBelt.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\ChameleonBelt.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\ChameleonBelt.pvr"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							Description="Generating ChameleonBelt.pvr"
+							CommandLine="&quot;$(ProjectDir)..\..\..\..\..\Utilities\PVRTexTool\PVRTexToolCL\Win32\PVRTexTool.exe&quot; -m -fOGLPVRTC2 -i&quot;$(InputPath)&quot; -o&quot;$(ProjectDir)..\..\ChameleonBelt.pvr&quot;"
+							Outputs="$(ProjectDir)..\..\ChameleonBelt.pvr"/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+		</Filter>		
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,15 @@
+base referer
+rect $structSPODScene.html 588,316 687,343
+rect $structSPODLight.html 79,226 167,252
+rect $structEPODLight.html 7,7 95,34
+rect $structSPODMaterial.html 263,226 369,252
+rect $structEPODBlendOp.html 119,7 231,34
+rect $structEPODBlendFunc.html 255,7 377,34
+rect $structSPODMesh.html 505,226 596,252
+rect $classCPVRTBoneBatches.html 401,7 548,34
+rect $classPVRTMATRIXf.html 572,7 684,34
+rect $classCPODData.html 708,7 796,34
+rect $structEPODPrimitiveType.html 820,7 961,34
+rect $structSPODCamera.html 620,226 727,252
+rect $structSPODNode.html 751,226 841,252
+rect $structSPODTexture.html 865,226 969,252

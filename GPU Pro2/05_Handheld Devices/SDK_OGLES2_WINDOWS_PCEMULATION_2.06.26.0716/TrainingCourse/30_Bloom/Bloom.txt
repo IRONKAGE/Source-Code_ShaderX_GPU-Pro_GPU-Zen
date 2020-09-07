@@ -1,0 +1,12 @@
+Demo title: 		Bloom
+
+Demonstrates: 		How to implement a Bloom effect
+
+Short Description:	This training course demonstrates a simple implementation of a Bloom effect
+
+Full Description:	
+This training course demonstrates a sample implementation of a Bloom post processing effect. Therefore the bright parts of the picture are extracted in the post processing step, blurred and added over the final image to create a glow around the object borders.  
+
+VGP: 			Not Required
+Polygon Count: 		0
+Vertex Count: 		0

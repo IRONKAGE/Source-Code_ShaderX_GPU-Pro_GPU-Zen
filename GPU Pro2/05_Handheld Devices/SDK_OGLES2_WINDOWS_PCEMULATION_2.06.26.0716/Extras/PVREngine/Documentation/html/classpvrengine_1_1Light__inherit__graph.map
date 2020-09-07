@@ -1,0 +1,5 @@
+base referer
+rect $classpvrengine_1_1LightDirectional.html 7,82 188,108
+rect $classpvrengine_1_1LightPODDirectional.html 212,82 423,108
+rect $classpvrengine_1_1LightPODPoint.html 447,82 625,108
+rect $classpvrengine_1_1LightPoint.html 649,82 799,108

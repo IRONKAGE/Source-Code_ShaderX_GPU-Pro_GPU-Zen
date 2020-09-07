@@ -1,0 +1,4 @@
+base referer
+rect $Manager_8h.html 84,156 169,183
+rect $Light_8h.html 193,156 255,183
+rect $dynamicArray_8h.html 40,81 155,108

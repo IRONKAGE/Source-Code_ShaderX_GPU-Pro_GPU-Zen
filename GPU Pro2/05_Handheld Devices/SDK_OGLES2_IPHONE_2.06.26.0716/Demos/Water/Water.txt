@@ -1,0 +1,32 @@
+
+Demo title: 		Water
+
+Demonstrates: 		Water simulation
+
+Short Description:	Shows how to render a water effect on a given plane
+
+Full Description:	Utilises a combination of different techniques to produce a water effect. 
+			User input controls the elements that are implemented in the effect so 
+			that users can determine the effect that would best suit their needs.
+
+
+VGP: 			Not Required
+Polygon Count:
+Vertex Count:
+
+
+//------------------------------------------------------------------------------------//
+//
+//					Controls
+//
+//------------------------------------------------------------------------------------//
+left and right arrows - scroll through user controlled variables
+up and down arrows - change the value of the currently selected variable
+
+//------------------------------------------------------------------------------------//
+//
+//					Additional notes
+//
+//------------------------------------------------------------------------------------//
+When reflection, refraction and depth effects are off, the water colours alpha value is used to blend the plane in with the rest of the rendered world.
+This adds to the quality of the basic effect for very little cost.
