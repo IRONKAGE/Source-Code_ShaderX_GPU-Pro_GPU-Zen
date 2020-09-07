@@ -1,0 +1,38 @@
+#version 400
+
+layout (isolines, equal_spacing) in;
+
+in float angle[];
+
+patch in Attributes
+{
+    vec2 radiusRange;
+    vec2 center;
+    vec2 heightRange;
+    vec3 color;
+} attributes;
+
+out Vertex
+{
+    float angle;
+    vec2 radiusRange;
+    vec2 center;
+    vec2 heightRange;
+    vec3 color;
+    bool hasSide;
+} vertex;
+
+void main()
+{
+    float pos = (gl_TessCoord.x + gl_TessCoord.y * gl_TessLevelOuter[0]) / float(gl_TessLevelOuter[0]);
+        
+    vertex.angle = mix(angle[0], angle[1], pos);
+    
+    vertex.radiusRange = attributes.radiusRange;
+    vertex.center = attributes.center;
+    vertex.heightRange = attributes.heightRange;
+    vertex.color = attributes.color;
+    
+    float threshold = 0.5/(gl_TessLevelOuter[0]*gl_TessLevelOuter[1]);
+    vertex.hasSide = pos<threshold || pos>1.0-threshold;
+}

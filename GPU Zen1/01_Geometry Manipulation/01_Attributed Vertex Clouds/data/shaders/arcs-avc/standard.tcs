@@ -1,0 +1,41 @@
+#version 400
+
+layout (vertices = 2) out;
+
+in Segment
+{
+    vec2 angleRange;
+    vec2 radiusRange;
+    vec2 center;
+    vec2 heightRange;
+    vec3 color;
+    int tessellationCount;
+} segment[];
+
+out float angle[];
+
+patch out Attributes
+{
+    vec2 radiusRange;
+    vec2 center;
+    vec2 heightRange;
+    vec3 color;
+} attributes;
+
+void main()
+{
+    angle[gl_InvocationID] = segment[0].angleRange[gl_InvocationID==0?0:1];
+    
+    if (gl_InvocationID == 0)
+    {
+        float sqrtTesslevel = clamp(ceil(sqrt(segment[0].tessellationCount)), 2.0, 64.0);
+        
+        gl_TessLevelOuter[0] = sqrtTesslevel;
+        gl_TessLevelOuter[1] = sqrtTesslevel;
+            
+        attributes.radiusRange = segment[0].radiusRange;
+        attributes.center = segment[0].center;
+        attributes.heightRange = segment[0].heightRange;
+        attributes.color = segment[0].color;
+    }
+}

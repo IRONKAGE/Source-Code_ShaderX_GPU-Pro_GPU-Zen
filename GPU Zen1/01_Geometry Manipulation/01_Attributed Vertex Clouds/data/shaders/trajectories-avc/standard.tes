@@ -1,0 +1,147 @@
+#version 400
+
+layout (quads, equal_spacing) in;
+
+patch in CurrentAttributes
+{
+    vec3  position;
+    int   trajectoryID;
+    int   type;
+    vec3  color;
+    float sizeValue;
+} currentAttributes;
+
+patch in PreviousAttributes
+{
+    vec3  position;
+    int   trajectoryID;
+    int   type;
+    vec3  color;
+    float sizeValue;
+} previousAttributes;
+
+patch in NextAttributes
+{
+    vec3  position;
+    int   trajectoryID;
+    int   type;
+    vec3  color;
+    float sizeValue;
+} nextAttributes;
+
+out Vertex
+{
+    vec3 color;
+} vertex;
+
+uniform float colorMixingArea = 0.5;
+
+const float pi = 3.141592654;
+const float pi2 = 2.0 * pi;
+
+void main()
+{
+    float y = gl_TessCoord.y;
+    float x = gl_TessCoord.x;
+    float secondHalf = step(0.5, x);
+    float xNormalized = mix(x * 2.0, x * 2.0 - 1.0, secondHalf);
+
+    int type = currentAttributes.type;
+    int neighborType = int(mix(previousAttributes.type, nextAttributes.type, secondHalf));
+    int otherNeighborType = int(mix(previousAttributes.type, nextAttributes.type, 1.0 - secondHalf));
+    int id = currentAttributes.trajectoryID;
+    int neighborID = int(mix(previousAttributes.trajectoryID, nextAttributes.trajectoryID, secondHalf));
+    int otherNeighborID = int(mix(previousAttributes.trajectoryID, nextAttributes.trajectoryID, 1.0 - secondHalf));
+    
+    vec3 tangent = normalize(mix(currentAttributes.position - previousAttributes.position, nextAttributes.position - currentAttributes.position, secondHalf));
+    
+    if (neighborID != id)
+    {
+        if (otherNeighborID != id)
+        {
+            tangent = vec3(1.0, 0.0, 0.0);
+        }
+        else
+        {
+            tangent = normalize(mix(currentAttributes.position - previousAttributes.position, nextAttributes.position - currentAttributes.position, 1.0 - secondHalf));
+        }
+    }
+    
+    //tangent = normalize(vec3(1.0, 1.0, 1.0));
+    vec3 normal = normalize(mix(vec3(0.0, 1.0, 0.0), vec3(1.0, 0.0, 0.0), step(0.9, abs(dot(vec3(0.0, 1.0, 0.0), tangent)))));
+    vec3 bitangent = normalize(cross(normal, tangent));
+    normal = normalize(cross(bitangent, tangent));
+    
+    vec3 position = currentAttributes.position;
+    vec3 color = currentAttributes.color;
+    
+    if (neighborID == id && (neighborType == 2 && type == 2)) // tube
+    {
+        color = mix(mix(previousAttributes.color, currentAttributes.color, secondHalf), mix(currentAttributes.color, nextAttributes.color, secondHalf), smoothstep(0.5 - colorMixingArea * 0.5, 0.5 + colorMixingArea * 0.5, xNormalized));
+        
+        float radius = mix(mix(previousAttributes.sizeValue, currentAttributes.sizeValue, secondHalf), mix(currentAttributes.sizeValue, nextAttributes.sizeValue, secondHalf), smoothstep(0.0, 1.0, xNormalized));
+        radius = pow(radius, 1.4);
+        
+        position = mix(mix(previousAttributes.position, currentAttributes.position, secondHalf), mix(currentAttributes.position, nextAttributes.position, secondHalf), xNormalized);
+        position += radius * (cos(pi2 * y) * normal + sin(pi2 * y) * bitangent);
+    }
+    else
+    {
+        float radius = currentAttributes.sizeValue;
+        radius = pow(radius, 1.4);
+        
+        position += radius * tangent * mix(1.0, 1.0, secondHalf) * cos(pi * (1.0 - xNormalized));
+        position += radius * (cos(pi2 * y) * normal + sin(pi2 * y) * bitangent) * sin(pi * (1.0 - xNormalized));
+    }
+    
+    vertex.color = color;
+    gl_Position = vec4(position, 1.0);
+}
+
+
+
+/*else if (attributes.type == 2) // tube / line
+{
+    vec3 tangent1 = attributes.incoming;
+    vec3 tangent2 = attributes.outgoing;
+    vec3 bitangent1 = vec3(0.0, 1.0, 0.0);
+    vec3 bitangent2 = vec3(0.0, 1.0, 0.0);
+    
+    if (abs(dot(normalize(bitangent1), normalize(tangent1))) > 0.99)
+    {
+        bitangent1 = vec3(1.0, 0.0, 0.0) * attributes.sizeValue;
+    }
+    
+    if (abs(dot(normalize(bitangent2), normalize(tangent2))) > 0.99)
+    {
+        bitangent2 = vec3(1.0, 0.0, 0.0) * attributes.sizeValue;
+    }
+    
+    vec3 normal1 = cross(tangent1, bitangent1);
+    vec3 normal2 = cross(tangent2, bitangent2);
+    
+    bitangent1 = cross(normal1, tangent1);
+    bitangent2 = cross(normal2, tangent2);
+    
+    vec3 tangent = mix(tangent1, tangent2, step(1.0, gl_TessCoord.x));
+    vec3 bitangent = mix(bitangent1, bitangent2, step(1.0, gl_TessCoord.x));
+    vec3 normal = mix(normal1, normal2, step(1.0, gl_TessCoord.x));
+    
+    vec3 position = attributes.position;
+    position += tangent * (gl_TessCoord.x * 2.0 - 1.0);
+    position += bitangent * cos(2 * 3.141592654 * gl_TessCoord.y) + normal * sin(2 * 3.141592654 * gl_TessCoord.y);
+    
+    gl_Position = vec4(position, 1.0);
+    
+    //vertex.tangent = tangent;
+    vertex.bitangent = bitangent;
+    vertex.normal = normal;
+}
+else
+{
+    gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+    
+    //vertex.tangent = vec3(0.0, 0.0, 0.0);
+    vertex.bitangent = vec3(0.0, 0.0, 0.0);
+    vertex.normal = vec3(0.0, 0.0, 0.0);
+}*/

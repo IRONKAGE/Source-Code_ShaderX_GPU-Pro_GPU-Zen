@@ -1,0 +1,91 @@
+#version 400
+
+layout (vertices = 4) out;
+
+in CurrentSegment
+{
+    vec3  position;
+    int   trajectoryID;
+    int   type;
+    vec3  color;
+    float sizeValue;
+} current[];
+
+in PreviousSegment
+{
+    vec3  position;
+    int   trajectoryID;
+    int   type;
+    vec3  color;
+    float sizeValue;
+} previous[];
+
+in NextSegment
+{
+    vec3  position;
+    int   trajectoryID;
+    int   type;
+    vec3  color;
+    float sizeValue;
+} next[];
+
+patch out CurrentAttributes
+{
+    vec3  position;
+    int   trajectoryID;
+    int   type;
+    vec3  color;
+    float sizeValue;
+} currentAttributes;
+
+patch out PreviousAttributes
+{
+    vec3  position;
+    int   trajectoryID;
+    int   type;
+    vec3  color;
+    float sizeValue;
+} previousAttributes;
+
+patch out NextAttributes
+{
+    vec3  position;
+    int   trajectoryID;
+    int   type;
+    vec3  color;
+    float sizeValue;
+} nextAttributes;
+
+uniform int tessellationLevel = 16;
+
+void main()
+{
+    if (gl_InvocationID == 0)
+    {
+        gl_TessLevelOuter[0] = tessellationLevel;
+        gl_TessLevelOuter[1] = tessellationLevel;
+        gl_TessLevelOuter[2] = tessellationLevel;
+        gl_TessLevelOuter[3] = tessellationLevel;
+        
+        gl_TessLevelInner[0] = tessellationLevel;
+        gl_TessLevelInner[1] = tessellationLevel;
+        
+        currentAttributes.position = current[0].position;
+        currentAttributes.trajectoryID = current[0].trajectoryID;
+        currentAttributes.type = current[0].type;
+        currentAttributes.color = current[0].color;
+        currentAttributes.sizeValue = current[0].sizeValue;
+        
+        previousAttributes.position = previous[0].position;
+        previousAttributes.trajectoryID = previous[0].trajectoryID;
+        previousAttributes.type = previous[0].type;
+        previousAttributes.color = previous[0].color;
+        previousAttributes.sizeValue = previous[0].sizeValue;
+        
+        nextAttributes.position = next[0].position;
+        nextAttributes.trajectoryID = next[0].trajectoryID;
+        nextAttributes.type = next[0].type;
+        nextAttributes.color = next[0].color;
+        nextAttributes.sizeValue = next[0].sizeValue;
+    }
+}

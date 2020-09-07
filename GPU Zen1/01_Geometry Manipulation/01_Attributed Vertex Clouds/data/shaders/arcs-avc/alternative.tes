@@ -1,0 +1,49 @@
+#version 400
+
+layout (quads, equal_spacing) in;
+
+patch in Attributes
+{
+    vec2 angleRange;
+    vec2 radiusRange;
+    vec2 center;
+    vec2 heightRange;
+    vec3 color;
+} attributes;
+
+out Vertex
+{
+    vec3 color;
+} vertex;
+
+const float epsilon = 0.000;
+
+vec3 circlePoint(in float angle, in float radius, in float height, in vec2 center)
+{
+    float x = sin(angle) * radius + center.x;
+    float y = cos(angle) * radius + center.y;
+    
+    return vec3(x, height, y);
+}
+
+void main()
+{
+    vertex.color = attributes.color;
+    
+    int segmentCount = int(gl_TessLevelInner[0]);
+    int segment = int(round(gl_TessCoord.x * int(gl_TessLevelInner[0] + 2.0))) - 1;
+    
+    float x = float(segment) / float(segmentCount);
+    
+    float angle = clamp(mix(attributes.angleRange.x, attributes.angleRange.y, x), attributes.angleRange.x, attributes.angleRange.y);
+    float radius = mix(attributes.radiusRange.x, attributes.radiusRange.y, step(0.375, gl_TessCoord.y) - step(0.875, gl_TessCoord.y));
+    float height = mix(attributes.heightRange.x, attributes.heightRange.y, step(0.125, gl_TessCoord.y) - step(0.625, gl_TessCoord.y));
+    
+    if (x < 0 || x > 1.0)
+    {
+        radius = mix(attributes.radiusRange.x, attributes.radiusRange.y, 0.5);
+        height = mix(attributes.heightRange.x, attributes.heightRange.y, 0.5);
+    }
+    
+    gl_Position = vec4(circlePoint(angle, radius, height, attributes.center), 1.0);
+}
